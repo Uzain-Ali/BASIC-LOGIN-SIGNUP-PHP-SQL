@@ -13,9 +13,9 @@
   <body>
     <div class="container my-5">
         <div class="row">
-            <div class="col-md-6 col-xm-12">
+            <div class="col-md-6 col-xm-12" style="width:500px">
                 <h1 class="text-center">Sign Up</h1>
-                    <form action="database/signup.php" method="post">
+                    <form action="<?= url('auth/register.php') ?>" method="post">
                         <div class="form-group">
                             <label for="username">Username</label>
                             <input type="text" class="form-control" id="username" autocomplete="off" placeholder="Enter Username" name="username">

@@ -20,7 +20,7 @@ if($_SERVER['REQUEST_METHOD']=="POST"){
             if($num>0){
                 $login=1;
                 $_SESSION['username']=$username;
-                header('location: ../welcome.php');
+                redirect('panel');
             }else{
                 $invalid=1;
             }

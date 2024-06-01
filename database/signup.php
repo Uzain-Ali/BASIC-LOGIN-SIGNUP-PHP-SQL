@@ -11,14 +11,7 @@ if($_SERVER['REQUEST_METHOD']=='POST'){
         $password= md5($_POST['password']);
         $cpassword= md5($_POST['cpassword']);
 
-        // $sql = "INSERT INTO users (username, password) values('$username','$password')";
-        // $result = mysqli_query($conn, $sql);
-
-        // if($result){
-        //     echo "Data Inserted";
-        // }else{
-        //     die("Error". mysqli_error());
-        // }
+        
 
         $sql = "SELECT * FROM users where username='$username'";
         $result = mysqli_query($conn, $sql);
@@ -56,8 +49,8 @@ if($_SERVER['REQUEST_METHOD']=='POST'){
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css">
     <title>SignUp Page</title>
-</head>
-<body>
+    </head>
+    <body>
     <?php
     if($user){
        echo "<div class='alert alert-danger' role='alert'>
